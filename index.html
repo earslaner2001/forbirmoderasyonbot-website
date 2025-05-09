@@ -3,103 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Förbır Moderasyon Botu</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>Förbır Moderasyon V2</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <!-- Navbar -->
-  <header class="bg-gray-800 shadow-md">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold tracking-wide">Förbır Moderasyon</h1>
-      <nav class="space-x-4">
-        <a href="#ozellikler" class="hover:underline">Özellikler</a>
-        <a href="#komutlar" class="hover:underline">Komutlar</a>
-        <a href="#davet" class="hover:underline">Davet Et</a>
-      </nav>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Förbır Moderasyon</h1>
+      <p>Sunucunu koruyan, ceza dağıtan disiplin timi</p>
+      <a href="#" class="davet-butonu">🚀 Sunucuna Davet Et</a>
     </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="text-center py-24 px-6 bg-black bg-gradient-to-b from-gray-900 to-gray-800 animate-fade-in">
-  <h2 class="text-5xl font-extrabold tracking-wider text-white mb-4 animate-pulse">🇹🇷 Sunucunu Koru, Disiplini Sağla!</h2>
-  <p class="text-lg text-gray-400 mb-6 italic">Türkçü ruhla hazırlanmış Discord moderasyon sistemi.</p>
-  <a href="https://discord.com/oauth2/authorize?client_id=803653844654489610&permissions=8&integration_type=0&scope=bot" class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full transition">🔗 Davet Et</a>
   </section>
 
   <!-- Özellikler -->
-  <section id="ozellikler" class="container mx-auto py-16 px-6">
-    <h3 class="text-2xl font-bold mb-6 border-b border-gray-700 pb-2">Öne Çıkan Özellikler</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-gray-800 p-6 rounded-lg shadow">
-        <h4 class="text-xl font-semibold mb-2">⚡ Otomatik Ceza Sistemi</h4>
-        <p class="text-gray-300">Uyarı limitine ulaşan kullanıcılar otomatik cezalandırılır.</p>
+  <section class="section">
+    <h2>Öne Çıkan Özellikler</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>⚖️ Otomatik Ceza Sistemi</h3>
+        <p>Uyarı limiti dolanlara otomatik mute/ban uygulanır.</p>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow">
-        <h4 class="text-xl font-semibold mb-2">✉ Log Kanalları</h4>
-        <p class="text-gray-300">Tüm işlemler ayrıntılı şekilde belirlediğiniz log kanalına gönderilir.</p>
+      <div class="feature-box">
+        <h3>📜 Log Kanalları</h3>
+        <p>Ceza kayıtları detaylı şekilde log kanalına düşer.</p>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow">
-        <h4 class="text-xl font-semibold mb-2">🔧 Ayarlanabilir Yetkili Rol</h4>
-        <p class="text-gray-300">Ceza ve ayar komutlarını kullanabilecek yetkilileri belirleyebilirsin.</p>
+      <div class="feature-box">
+        <h3>🔐 Yetkili Rol Sistemi</h3>
+        <p>Yalnızca yetkilendirilmiş roller işlem yapabilir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- İstatistikler -->
+  <section class="section">
+    <h2>Bot İstatistikleri</h2>
+    <div class="stats">
+      <div class="stat-box">
+        <h2 id="stat1">0</h2>
+        <p>Aktif Sunucu</p>
+      </div>
+      <div class="stat-box">
+        <h2 id="stat2">0</h2>
+        <p>Uygulanan Ceza</p>
+      </div>
+      <div class="stat-box">
+        <h2>/warn</h2>
+        <p>En Çok Kullanılan Komut</p>
       </div>
     </div>
   </section>
 
   <!-- Komutlar -->
-
-  <!-- İstatistikler -->
-  <section id="istatistik" class="bg-gray-900 py-16 px-6">
-    <div class="container mx-auto text-center">
-      <h3 class="text-2xl font-bold mb-6 border-b border-gray-700 pb-2">Bot İstatistikleri</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-200">
-        <div class="bg-gray-800 p-6 rounded-lg shadow">
-          <h4 class="text-3xl font-extrabold">+324</h4>
-          <p class="text-gray-400 mt-2">Aktif Sunucu</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow">
-          <h4 class="text-3xl font-extrabold">+7.450</h4>
-          <p class="text-gray-400 mt-2">Uygulanan Ceza</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow">
-          <h4 class="text-3xl font-extrabold">/warn</h4>
-          <p class="text-gray-400 mt-2">En Çok Kullanılan Komut</p>
-        </div>
-      </div>
+  <section class="section">
+    <h2>Komut Listesi</h2>
+    <div class="commands">
+      <div class="command-item"><code>/warn</code> – Kullanıcıyı uyarır.</div>
+      <div class="command-item"><code>/uyarilar</code> – Uyarı geçmişini gösterir.</div>
+      <div class="command-item"><code>/mute</code> – Kullanıcıyı susturur.</div>
+      <div class="command-item"><code>/unmute</code> – Susturmayı kaldırır.</div>
+      <div class="command-item"><code>/ban</code> – Sunucudan yasaklar.</div>
+      <div class="command-item"><code>/unban</code> – Yasak kaldırır.</div>
+      <div class="command-item"><code>/kick</code> – Sunucudan atar.</div>
+      <div class="command-item"><code>/cezalar</code> – Tüm cezaları listeler.</div>
+      <div class="command-item"><code>/ayar-log</code> – Log kanalını ayarlar.</div>
+      <div class="command-item"><code>/ayar-uyarilimit</code> – Uyarı limitini belirler.</div>
+      <div class="command-item"><code>/ayar-otopunish</code> – Oto-ceza modunu aç/kapatır.</div>
+      <div class="command-item"><code>/ayar-yetkilirol</code> – Yetkili rolü belirler.</div>
+      <div class="command-item"><code>/veri-sıfırla</code> – Tüm sunucu verisini sıfırlar.</div>
     </div>
   </section>
 
-
-  <section id="komutlar" class="bg-gray-800 py-16 px-6">
-    <div class="container mx-auto">
-      <h3 class="text-2xl font-bold mb-6 border-b border-gray-700 pb-2">Komutlar</h3>
-      <ul class="space-y-3 text-gray-300 list-disc list-inside">
-        <li><code>/warn</code> – Kullanıcıyı uyarır.</li>
-        <li><code>/uyarilar</code> – Kullanıcının uyarı geçmişini gösterir.</li>
-        <li><code>/unmute</code> – Susturmayı kaldırır.</li>
-        <li><code>/mute</code> – Kullanıcıyı belirli süreliğine susturur.</li>
-        <li><code>/ban</code> – Kullanıcıyı sunucudan yasaklar.</li>
-        <li><code>/unban</code> – Kullanıcının yasağını kaldırır.</li>
-        <li><code>/kick</code> – Kullanıcıyı sunucudan atar.</li>
-        <li><code>/cezalar</code> – Sunucudaki tüm cezaları listeler.</li>
-        <li><code>/veri-sıfırla</code> – Sunucuya ait verileri sıfırlar (admin-only).</li>
-        <li><code>/ayar-log</code> – Log kanalını ayarlar.</li>
-        <li><code>/ayar-uyarilimit</code> – Uyarı limitini değiştirir.</li>
-        <li><code>/ayar-otopunish</code> – Oto-cezalandırmayı aç/kapat.</li>
-        <li><code>/ayar-yetkilirol</code> – Yetkili rolünü tanımlar.</li>
-        <li><code>/komutlar</code> – Bu komut listesini gösterir.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Davet Butonu -->
-  <section id="davet" class="text-center py-16 bg-gray-900">
-    <h3 class="text-2xl font-bold mb-4">Förbır'la tanışmak için hazır mısın?</h3>
-    <a href="https://discord.com/oauth2/authorize?client_id=803653844654489610&permissions=8&integration_type=0&scope=bot" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full transition">Sunucuna Davet Et</a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-6 text-gray-500 bg-gray-800">
-    &copy; 2025 Förbır Moderasyon. Tüm hakları saklıdır.
-  </footer>
+  <script>
+    const count1 = new CountUp('stat1', 324);
+    const count2 = new CountUp('stat2', 7450);
+    count1.start();
+    count2.start();
+  </script>
 </body>
 </html>
