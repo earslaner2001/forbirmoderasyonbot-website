@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Förbır Moderasyon Botu</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navbar -->
+  <header class="bg-gray-800 shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-wide">Förbır Moderasyon</h1>
+      <nav class="space-x-4">
+        <a href="#ozellikler" class="hover:underline">Özellikler</a>
+        <a href="#komutlar" class="hover:underline">Komutlar</a>
+        <a href="#davet" class="hover:underline">Davet Et</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 bg-gradient-to-b from-gray-800 to-gray-900">
+    <h2 class="text-4xl font-extrabold mb-4">Sunucunu Koru, Disiplini Sağla!</h2>
+    <p class="text-lg text-gray-300 mb-6">Türkçü ruhla hazırlanmış moderasyon botu: Förbır!</p>
+    <a href="#davet" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition">Beni Sunucuna Ekle</a>
+  </section>
+
+  <!-- Özellikler -->
+  <section id="ozellikler" class="container mx-auto py-16 px-6">
+    <h3 class="text-2xl font-bold mb-6 border-b border-gray-700 pb-2">Öne Çıkan Özellikler</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow">
+        <h4 class="text-xl font-semibold mb-2">⚡ Otomatik Ceza Sistemi</h4>
+        <p class="text-gray-300">Uyarı limitine ulaşan kullanıcılar otomatik cezalandırılır.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow">
+        <h4 class="text-xl font-semibold mb-2">✉ Log Kanalları</h4>
+        <p class="text-gray-300">Tüm işlemler ayrıntılı şekilde belirlediğiniz log kanalına gönderilir.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow">
+        <h4 class="text-xl font-semibold mb-2">🔧 Ayarlanabilir Yetkili Rol</h4>
+        <p class="text-gray-300">Ceza ve ayar komutlarını kullanabilecek yetkilileri belirleyebilirsin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Komutlar -->
+
+  <!-- İstatistikler -->
+  <section id="istatistik" class="bg-gray-900 py-16 px-6">
+    <div class="container mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-6 border-b border-gray-700 pb-2">Bot İstatistikleri</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-200">
+        <div class="bg-gray-800 p-6 rounded-lg shadow">
+          <h4 class="text-3xl font-extrabold">+324</h4>
+          <p class="text-gray-400 mt-2">Aktif Sunucu</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow">
+          <h4 class="text-3xl font-extrabold">+7.450</h4>
+          <p class="text-gray-400 mt-2">Uygulanan Ceza</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow">
+          <h4 class="text-3xl font-extrabold">/warn</h4>
+          <p class="text-gray-400 mt-2">En Çok Kullanılan Komut</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="komutlar" class="bg-gray-800 py-16 px-6">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold mb-6 border-b border-gray-700 pb-2">Komutlar</h3>
+      <ul class="space-y-3 text-gray-300 list-disc list-inside">
+        <li><code>/warn</code> – Kullanıcıyı uyarır.</li>
+        <li><code>/uyarilar</code> – Kullanıcının uyarı geçmişini gösterir.</li>
+        <li><code>/unmute</code> – Susturmayı kaldırır.</li>
+        <li><code>/mute</code> – Kullanıcıyı belirli süreliğine susturur.</li>
+        <li><code>/ban</code> – Kullanıcıyı sunucudan yasaklar.</li>
+        <li><code>/unban</code> – Kullanıcının yasağını kaldırır.</li>
+        <li><code>/kick</code> – Kullanıcıyı sunucudan atar.</li>
+        <li><code>/cezalar</code> – Sunucudaki tüm cezaları listeler.</li>
+        <li><code>/veri-sıfırla</code> – Sunucuya ait verileri sıfırlar (admin-only).</li>
+        <li><code>/ayar-log</code> – Log kanalını ayarlar.</li>
+        <li><code>/ayar-uyarilimit</code> – Uyarı limitini değiştirir.</li>
+        <li><code>/ayar-otopunish</code> – Oto-cezalandırmayı aç/kapat.</li>
+        <li><code>/ayar-yetkilirol</code> – Yetkili rolünü tanımlar.</li>
+        <li><code>/komutlar</code> – Bu komut listesini gösterir.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Davet Butonu -->
+  <section id="davet" class="text-center py-16 bg-gray-900">
+    <h3 class="text-2xl font-bold mb-4">Förbır'la tanışmak için hazır mısın?</h3>
+    <a href="https://discord.com/oauth2/authorize?client_id=CLIENT_ID_HERE&scope=bot+applications.commands&permissions=8" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full transition">Sunucuna Davet Et</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 bg-gray-800">
+    &copy; 2025 Förbır Moderasyon. Tüm hakları saklıdır.
+  </footer>
+</body>
+</html>
