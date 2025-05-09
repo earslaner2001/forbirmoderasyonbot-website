@@ -41,7 +41,7 @@
     <h2>Bot İstatistikleri</h2>
     <div class="stats">
       <div class="stat-box">
-        <h2 id="sunucu-sayisi">0</h2>
+        <h2 id="sunucu-sayisi">+0</h2>
         <p>Aktif Sunucu</p>
       </div>
       <div class="stat-box">
@@ -76,7 +76,7 @@
   </section>
 
   <script>
-  fetch('http://localhost:3001/api/stats')
+  fetch('https://forbirmoderasyonbot.onrender.com')
     .then(res => res.json())
     .then(data => {
       document.getElementById('sunucu-sayisi').innerText = '+' + data.guildCount;
