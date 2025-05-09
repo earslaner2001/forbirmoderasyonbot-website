@@ -41,7 +41,7 @@
     <h2>Bot İstatistikleri</h2>
     <div class="stats">
       <div class="stat-box">
-        <h2>+324</h2>
+        <h2 id="sunucu-sayisi">0</h2>
         <p>Aktif Sunucu</p>
       </div>
       <div class="stat-box">
@@ -74,5 +74,16 @@
       <div class="command-item"><code>/veri-sıfırla</code> – Tüm sunucu verisini sıfırlar.</div>
     </div>
   </section>
+
+  <script>
+  fetch('http://localhost:3001/api/stats')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('sunucu-sayisi').innerText = '+' + data.guildCount;
+    })
+    .catch(err => {
+      console.error('Sunucu sayısı alınamadı:', err);
+    });
+</script>
 </body>
 </html>
