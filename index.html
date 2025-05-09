@@ -75,14 +75,14 @@
     </div>
   </section>
 
-  <script>
-  fetch('https://forbirmoderasyonbot.onrender.com')
+<script>
+  fetch('https://forbirmoderasyonbot.onrender.com/api/stats')
     .then(res => res.json())
     .then(data => {
       document.getElementById('sunucu-sayisi').innerText = '+' + data.guildCount;
     })
-    .catch(err => {
-      console.error('Sunucu sayısı alınamadı:', err);
+    .catch(() => {
+      document.getElementById('sunucu-sayisi').innerText = '+?';
     });
 </script>
 </body>
